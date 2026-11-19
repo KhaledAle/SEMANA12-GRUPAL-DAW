@@ -1,0 +1,4 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>{% block title %}Centro Médico{% endblock %}</title></head><body>
+<nav><a href="{% url 'inicio' %}">Inicio</a>{% if user.is_authenticated %}<a href="{% url 'agendar' %}">Agendar</a><a href="{% url 'logout' %}">Salir</a>{% else %}<a href="{% url 'login' %}">Ingresar</a>{% endif %}</nav>
+{% if messages %}{% for message in messages %}<p>{{ message }}</p>{% endfor %}{% endif %}{% block content %}{% endblock %}
+</body></html>

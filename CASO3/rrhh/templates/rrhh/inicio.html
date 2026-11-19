@@ -1,0 +1,1 @@
+{% extends 'rrhh/base.html' %}{% block content %}<h1>Control de asistencia</h1>{% for registro in asistencias %}<p>{{ registro.empleado }} - {{ registro.fecha }}: entrada {{ registro.entrada|default:'--' }} salida {{ registro.salida|default:'--' }} | extras {{ registro.horas_extras }}</p>{% empty %}<p>Sin registros.</p>{% endfor %}{% endblock %}

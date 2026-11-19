@@ -1,0 +1,2 @@
+{% extends 'prestamos/base.html' %}
+{% block content %}<h1>Catálogo de equipos</h1>{% for equipo in equipos %}<article><b>{{ equipo.codigo }} - {{ equipo.nombre }}</b> | {{ equipo.estado }} | stock: {{ equipo.stock }} | {{ equipo.laboratorio }}</article>{% empty %}<p>No hay equipos.</p>{% endfor %}{% endblock %}

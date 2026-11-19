@@ -1,0 +1,1 @@
+{% extends 'centro/base.html' %}{% block content %}<h1>Historial de {{ paciente }}</h1>{% for c in consultas %}<article><b>{{ c.cita.fecha }}</b>: {{ c.diagnostico }} - {{ c.tratamiento }}</article>{% empty %}<p>Sin consultas registradas.</p>{% endfor %}{% endblock %}

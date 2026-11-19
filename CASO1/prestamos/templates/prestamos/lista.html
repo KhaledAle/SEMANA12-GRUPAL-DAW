@@ -1,0 +1,2 @@
+{% extends 'prestamos/base.html' %}
+{% block content %}<h1>Mis préstamos</h1>{% for p in prestamos %}<p>{{ p.equipo }} | {{ p.fecha_prestamo }} a {{ p.fecha_devolucion }} | {{ p.estado }}</p>{% empty %}<p>Sin préstamos.</p>{% endfor %}{% endblock %}

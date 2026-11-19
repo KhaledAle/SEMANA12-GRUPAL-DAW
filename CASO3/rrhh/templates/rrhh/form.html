@@ -1,0 +1,1 @@
+{% extends 'rrhh/base.html' %}{% block content %}<h1>{{ titulo }}</h1>{% if form %}<form method="post">{% csrf_token %}{{ form.as_p }}<button>Guardar</button></form>{% else %}<form method="post">{% csrf_token %}<button>Registrar ahora</button></form>{% endif %}{% endblock %}

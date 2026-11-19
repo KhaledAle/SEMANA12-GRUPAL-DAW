@@ -1,0 +1,1 @@
+{% extends 'centro/base.html' %}{% block content %}<h1>Agenda médica</h1>{% for cita in citas %}<p>{{ cita.fecha }} {{ cita.hora }} - {{ cita.paciente }} con {{ cita.medico }} ({{ cita.estado }})</p>{% empty %}<p>Sin citas.</p>{% endfor %}{% endblock %}
